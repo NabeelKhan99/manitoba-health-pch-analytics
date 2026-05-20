@@ -13,6 +13,7 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - ./ddl:/docker-entrypoint-initdb.d
+      - ./sql:/sql
     networks:
       - analytics-network
     healthcheck:
